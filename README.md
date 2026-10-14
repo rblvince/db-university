@@ -29,3 +29,13 @@ In `exam_student` la colonna `vote` può essere `NULL`: significa che lo student
 Esportato da drawSQL:
 
 ![Diagramma](db-university.png)
+
+## Query
+
+`queries.sql` contiene le query con `SELECT` del secondo esercizio (studenti nati nel 1990, corsi con più di 10 crediti, insegnanti senza telefono e altre). Non girano su `schema.sql`, che ha solo le tabelle vuote: vanno eseguite sul database del corso, importato dal dump fornito da Boolean (`db_university.sql`, non incluso nella repo). Il dump ha le stesse tabelle di `schema.sql`, con qualche colonna in più.
+
+Con MySQL 8.4:
+
+1. Creare il database: `CREATE DATABASE university;`
+2. Importare il dump: `mysql -u root -p university < db_university.sql`
+3. Eseguire le query: `mysql -u root -p university < queries.sql`, oppure aprire il file in DBeaver con il database `university` selezionato.
