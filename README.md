@@ -34,8 +34,11 @@ Esportato da drawSQL:
 
 `queries.sql` contiene le query con `SELECT` del secondo esercizio (studenti nati nel 1990, corsi con più di 10 crediti, insegnanti senza telefono e altre). Non girano su `schema.sql`, che ha solo le tabelle vuote: vanno eseguite sul database del corso, importato dal dump fornito da Boolean (`db_university.sql`, non incluso nella repo). Il dump ha le stesse tabelle di `schema.sql`, con qualche colonna in più.
 
+`group_by.sql` contiene le query con `GROUP BY` del terzo esercizio (iscritti per anno, insegnanti per edificio, media dei voti per appello e altre).
+`join.sql` contiene quelle con `JOIN` (studenti di un corso di laurea, corsi di un insegnante, docenti di un dipartimento, più due query bonus sui tentativi d'esame).
+
 Con MySQL 8.4:
 
 1. Creare il database: `CREATE DATABASE university;`
 2. Importare il dump: `mysql -u root -p university < db_university.sql`
-3. Eseguire le query: `mysql -u root -p university < queries.sql`, oppure aprire il file in DBeaver con il database `university` selezionato.
+3. Eseguire le query: `mysql -u root -p university < queries.sql` (o `group_by.sql`, `join.sql`), oppure aprire il file in DBeaver con il database `university` selezionato.
